@@ -131,7 +131,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # указываем папку (путь) для хранения медиа-файлов (картинок)
-MEDIA_URL = '/media/'
+# ссылка всегда должна отличаться от папки хранения
+
+MEDIA_URL = '/awersome_media/'
 
 
 
