@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,15 +48,15 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light fst-italic " style="background-color: #efc07a">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">My Awersome Blog</a>
+    <a class="navbar-brand" href="{% url 'home' %}">My Awersome Blog</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" aria-current="page" href="#">About me</a>
+        <a class="nav-link" aria-current="page" href="{% static 'AboutMe.txt' %}">About me</a>
         <a class="nav-link" target="_blank" rel="noopener noreferre" href="https://www.facebook.com/">Facebook</a>
-        <a class="nav-link active" href="#">Blog</a>
+        <a class="nav-link active" href="{% url 'showblog' %}">Blog</a>
       </div>
     </div>
   </div>
