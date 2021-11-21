@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from . models import Post
+from django.shortcuts import get_object_or_404
+from .models import Post
 
 
 # Create your views here.
@@ -11,3 +12,11 @@ def showblog(request):
                   }
                   )
 
+
+def specific_post(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    render(request,
+           'blog/specific_post.html', {
+               'post': post
+           }
+           )
