@@ -65,11 +65,11 @@
 <main class="ps-5">
   <h1 class="pt-5 pb-5">Recent Post</h1>
   {% for element in posts.all %}
-  <h2>{{ element.title }}</h2>
+  <a href=""><h2>{{ element.title }}</h2></a>
   <br>
   <img class="img-fluid" src="{{ element.image.url }}" width="300" height="300"/>
   <br>
-  <p>{{ element.text }}</p>
+  <p>{{ element.get_summary }}</p>
   {{ element.date }}
   <br>
   <br>
