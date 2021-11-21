@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>My blog</title>
+    <title>My Awersome Blog</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
 
@@ -66,7 +66,7 @@
 <main class="ps-5">
   <h1 class="pt-5 pb-5">Recent Post</h1>
   {% for element in posts.all %}
-  <a href=""><h2>{{ element.title }}</h2></a>
+  <a href="{% url 'specific_post' element.id %}"><h2>{{ element.title }}</h2></a>
   <br>
   <img class="img-fluid" src="{{ element.image.url }}" width="300" height="300"/>
   <br>
