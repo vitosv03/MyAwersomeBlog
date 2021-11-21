@@ -122,11 +122,20 @@ USE_L10N = True
 
 USE_TZ = True
 
+# папка где Джанго будет искать статический файлы
+STATICFILES_DIRS = [
+    BASE_DIR / 'myawersomeblog/static/'
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
+
+# указываем путь к папке с стаическими файлами
+# например файл AboutMe для страницы О НАС
+# и картинка к нему
+STATIC_ROOT = BASE_DIR / 'static'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -135,12 +144,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # указываем раздел для хранения медиа-файлов (картинок)
 # имя в кавычках может быть любым
-
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # указываем папку (путь) для хранения медиа-файлов (картинок)
 # ссылка всегда должна отличаться от папки хранения
-
 MEDIA_URL = '/awersome_media/'
 
 
