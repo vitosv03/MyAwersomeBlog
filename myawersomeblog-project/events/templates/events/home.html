@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html lang="en">
+{% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,7 +56,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" aria-current="page" href="#">About me</a>
+        <a class="nav-link" aria-current="page" href="{% static 'AboutMe.txt' %}">About me</a>
         <a class="nav-link" href="#">Facebook</a>
         <a class="nav-link" href="#">Blog</a>
       </div>
@@ -73,6 +74,9 @@
         <p>
           <a href="mailto:lekt@ukr.net" class="btn btn-primary my-2">Mail me!</a>
         </p>
+
+        <img src="{% static 'AboutMe photo.jpg' %}" height="300" width="300">
+
       </div>
     </div>
   </section>
